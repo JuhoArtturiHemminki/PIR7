@@ -17,7 +17,7 @@ Traditional execution models suffer from severe memory bandwidth saturation and 
 The operational integrity of PIR7 is governed by a unified mathematical framework that enforces dynamic spatial transformation and deterministic numerical reduction.
 
 ### Geometric Square-Root Space & Entropy Mapping
-Instead of employing empirical or static block configurations, PIR7 models the entire index space via an \(\mathcal{O}(1)\) geometric coordinate transform. The target data vector \(N\) is mapped into a structured state-space partitioned into dynaamisiin Entropiaportaisiin (Information Density Tiers). The dynamic segment size \(S\) for any given topological space coordinates is computed deterministically via direct address arithmetic:
+Instead of employing empirical or static block configurations, PIR7 models the entire index space via an \(\mathcal{O}(1)\) geometric coordinate transform. The target data vector \(N\) is mapped into a structured state-space partitioned into dynamic Information Density Tiers. The dynamic segment size \(S\) for any given topological space coordinates is computed deterministically via direct address arithmetic:
 
 \[S = \max \left( 64, \left\lfloor \sqrt{N} \right\rfloor \right) \quad \text{where } S \equiv 0 \pmod{64}\]
 
@@ -57,7 +57,7 @@ The mathematical abstractions of PIR7 map directly to physical hardware layers, 
 ```mermaid
 graph TD
     A[Main Memory: Single Read Pass] --> B(Load into YMM Registers)
-    B --> C(Compute Polynomi/Volterra Transformation lennosta)
+    B --> C(Compute Polynomi/Volterra Transformation on-the-fly)
     C --> D(_mm256_cmp_ps Register Predicate Check)
     D --> E(Accumulate Block Mask via _mm256_or_ps)
     E --> F(Write Results Immediately to 64-byte Aligned L1 Buffer)
